@@ -9,16 +9,6 @@ COMPATIBLE_MACHINE = "^clearfog(-gtr-(s4|l8))?$"
 KERNEL_IMAGETYPE = "zImage"
 KCONFIG_MODE = "--alldefconfig"
 
-SRCBRANCH = "linux-5.2.y"
-SRC_URI = "git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git;protocol=git;nocheckout=1;name=machine;branch=${SRCBRANCH}"
-LINUX_VERSION ?= "5.2.21"
-
-LIC_FILES_CHKSUM = "file://COPYING;md5=bbea815ee2795b2f4230826c0c6b8814"
-
-SRCREV = "e91ef5bcdeda8956eb9f1972ed90198b698dca0f"
-
-PV = "${LINUX_VERSION}+git${SRCPV}"
-
 KERNEL_DEVICETREE_clearfog = " \
 	armada-388-clearfog-base.dtb \
 	armada-388-clearfog-pro.dtb \
