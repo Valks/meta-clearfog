@@ -1,8 +1,5 @@
 # Based on linux-yocto-custom.bb
 
-inherit kernel
-require recipes-kernel/linux/linux-yocto.inc
-
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 COMPATIBLE_MACHINE = "^clearfog(-gtr-(s4|l8))?$"
 
